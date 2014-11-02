@@ -1,0 +1,103 @@
+html {
+    background-color: #000000;
+}
+body {
+	background-repeat: repeat-y;
+	background-color: #000000;
+	background-position: center;
+	margin: 0 0 0 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+nav > ul > li {
+    list-style: none;
+    float: none;
+}
+nav > ul {
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+     float: none;
+}
+
+a:link {
+    color: #FFFFCC;
+}
+a:visited {
+    color: #FFCC99;
+}
+a:hover {
+    color: #FFFFFF;
+}
+a:active {
+    color: #FF0000;
+}
+
+p {
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: #FFFFFF;
+    float: none;
+}
+
+.verticalRule {
+    border-left: 1px solid #FFFFFF;
+    height: 625px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+#instructors > img {
+    width: 100px;
+    height: 50px;
+    float: none;
+}
+
+#instructors li {
+    list-style: none;
+    float: left;
+}
+
+.categories ul {
+    list-style: none;
+    float: left;
+}
+
+.instructor{
+    float:left;
+    margin: 10px;
+}
+
+li {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right:25px;
+}
+
+h3 {
+    font-size: 18px;
+    float: left;
+    margin: 0 0 0 0;
+    text-shadow: 0 0 13px #fff,
+        0 0 25px #ffff00;
+    color: #ffffff;
+    font-family: "Times New Roman";
+}
+
+.navPic {
+    float: left;
+    margin: 0 0 0 0;
+}
+
+.linkGroup {
+    float: left;
+    margin: 0 0 0 0;
+    width: 250px;
+}
+
+.sepia {
+    -webkit-filter: sepia(100%);  
+    filter: sepia(100%);
+}
