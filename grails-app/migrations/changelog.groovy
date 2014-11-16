@@ -63,4 +63,6 @@ databaseChangeLog = {
 	include file: 'timestamps-not-null.groovy'
 
 	include file: 'remove-extra-column.groovy'
+
+	include file: 'shiroTablesAdded.groovy'
 }

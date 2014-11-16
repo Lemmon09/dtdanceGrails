@@ -10,23 +10,25 @@
 <body>
     <g:img dir="images" file="galleryTitle.gif" alt="Gallery Title" width="600px" height="53px" border="0" style="float:left;" />
     <hr>
-    <ul class="categories">
-        <li><a href="${createLink(action: 'revealGallery', params: [category: 'studio'])}">
-            <h2>Studio</h2>
-        </a></li>
-        <li><a href="${createLink(action: 'revealGallery', params: [category: 'fun'])}">
-            <h2>Fun</h2>
-        </a></li>
-        <li><a href="${createLink(action: 'revealGallery', params: [category: 'trips'])}">
-            <h2>Trips</h2>
-        </a></li>
-        <li><a href="${createLink(action: 'revealGallery', params: [category: 'recitals'])}">
-            <h2>Recitals</h2>
-         </a></li>
-        <li><a href="${createLink(action: 'revealGallery', params: [category: 'history'])}">
-            <h2>History</h2>
-        </a></li>
-    </ul>
+    <header class="categories">
+        <ul>
+            <li><a href="${createLink(action: 'gallery', params: 'Studio')}">
+                <h2>Studio</h2>
+            </a></li>
+            <li><a href="${createLink(action: 'gallery', params: 'Fun')}">
+                <h2>Fun</h2>
+            </a></li>
+            <li><a href="${createLink(action: 'gallery', params: 'Trips')}">
+                <h2>Trips</h2>
+            </a></li>
+            <li><a href="${createLink(action: 'gallery', params: 'Recitals')}">
+                <h2>Recitals</h2>
+             </a></li>
+            <li><a href="${createLink(action: 'gallery', params: 'History')}">
+                <h2>History</h2>
+            </a></li>
+        </ul>
+    </header>
 
 
     <!-- Gallery Div here -->
@@ -43,7 +45,7 @@
             <g:each status="i" in="${pics}" var="it">
                 <div class="item ${(i==0) ? 'active' : ''}">
                     <g:img dir="images/${category}" file="${it}" alt="" border="0" />
-                </div>
+                </div> 
             </g:each>
         </div>
         

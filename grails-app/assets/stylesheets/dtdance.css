@@ -62,8 +62,12 @@ hr {
     float: left;
 }
 
-.categories ul {
+.categories {
     list-style: none;
+    float: left;
+}
+
+.categories li{
     float: left;
 }
 

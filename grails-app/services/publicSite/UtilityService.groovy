@@ -7,12 +7,10 @@ import dtdance.TextBlock
 @Transactional
 class UtilityService {
 
-    def serviceMethod() {
-
-    }
+    def grailsApplication
     
     def gatherImageList(String imageFolder){
-        def baseFolder = grailsAttributes.getApplicationContext().getResource("/").getFile().toString()
+        def baseFolder = grailsApplication.parentContext.getResource("/").getFile().toString()
         def imagesFolder = baseFolder + "/images/" + imageFolder
         def imageList1 = new File(imagesFolder).list()
         def imageList = Arrays.asList(imageList1)       

@@ -139,35 +139,35 @@
                                 <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="studioLink">
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
-                                                href="${createLink(controller: 'PublicSite', action: 'revealContent', 
+                                                href="${createLink(controller: 'PublicSite', action: 'revealContentProtected', 
                                                 params: [category: 'announcements'])}">
                                             Announcements
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
-                                                href="${createLink(controller: 'PublicSite', action: 'revealContent', 
+                                                href="${createLink(controller: 'PublicSite', action: 'revealContentProtected', 
                                                 params: [category: 'eventsCalendar'])}">
                                             Event Calendar
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
-                                                href="${createLink(controller: 'PublicSite', action: 'revealContent', 
+                                                href="${createLink(controller: 'PublicSite', action: 'revealContentProtected', 
                                                 params: [category: 'classSchedules'])}">
                                             Class Schedule
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
-                                                href="${createLink(controller: 'PublicSite', action: 'revealContent', 
+                                                href="${createLink(controller: 'PublicSite', action: 'revealContentProtected', 
                                                 params: [category: 'newsletter'])}">
                                             Newsletter
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
-                                                href="${createLink(controller: 'PublicSite', action: 'revealContent', 
+                                                href="${createLink(controller: 'PublicSite', action: 'revealContentProtected', 
                                                 params: [category: 'studioPolicies'])}">
                                             Studio Policies
                                         </a>
@@ -202,7 +202,7 @@
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" target="iframe" 
                                                 href="${createLink(controller: 'PublicSite', action: 'revealGallery', 
-                                                params: [category: 'travel'])}">
+                                                params: [category: 'trips'])}">
                                             DT Travel
                                         </a>
                                     </li>
@@ -222,7 +222,7 @@
                 <main class="col-lg-10">
                     <iframe src="${createLink(controller: 'PublicSite', action: 'revealContent', params: [category: 'news'])}"
                             name="iframe" marginwidth="0" vspace="0" hspace="0" frameborder="0" marginheight="0"
-                            width="650" height="625" scrolling="auto">
+                            width="750px" height="400px" scrolling="auto">
                     </iframe>
                 </main>
             </section>
