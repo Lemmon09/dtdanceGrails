@@ -13,12 +13,10 @@ body {
 
 nav > ul > li {
     list-style: none;
-    float: none;
 }
 nav > ul {
      margin: 0 0 0 0;
      padding: 0 0 0 0;
-     float: none;
 }
 
 a:link {
@@ -39,6 +37,11 @@ p {
     font-family: "Times New Roman", Times, serif;
     color: #FFFFFF;
     float: none;
+}
+
+hr {
+    margin: 0 0 0 0;
+    padding; 0 0 0 0;
 }
 
 .verticalRule {
@@ -72,8 +75,6 @@ p {
 li {
     font-size: 18px;
     font-weight: bold;
-    float: left;
-    margin-right:25px;
 }
 
 h3 {
@@ -100,4 +101,21 @@ h3 {
 .sepia {
     -webkit-filter: sepia(100%);  
     filter: sepia(100%);
+}
+
+.headerImage img {
+  width: auto;
+  height: 250px;
+  max-height: 250px;
+  max-width: 775px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    
+}
+.dropdown-menu-left {
+    float:none;
+    left:50%;
+    top: 0%;
 }

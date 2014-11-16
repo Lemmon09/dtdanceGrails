@@ -6,9 +6,11 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
+//= require ../bootstrap/js/bootstrap
+//= require vintage
+//= require ../cleditor/jquery.cleditor
 //= require_tree .
 //= require_self
-//= require /index.js
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {

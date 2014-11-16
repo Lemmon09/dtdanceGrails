@@ -1,51 +1,36 @@
 package dtdance
 
 import dtdance.Images
+import publicSite.UtilityService
 
 class PublicSiteController {
 
+    UtilityService util
+    
+    /** The main app page, with all the links */
     def index() {
-        /*
-        def pics = Images.where{
-            category == "trips"
-        }.list()
-        [pics: pics]
-        */
+        def headerImages = util.gatherImageList('history')
+        [pics: headerImages]  
     }
 
-    def news(final String isEditing, final String bodyText) { 
+    /** Latest news and updates for all users in initally see */
+    def revealContent(final String isEditing, final String bodyText, final String category) {
+        println category
+        def contentCategory = category?:'news'
+        util.updateTextCategory(contentCategory, bodyText)
         
-        
-        def textBlock = new TextBlock(textBlock: bodyText,
-            category:'news'
-        )
-        textBlock.save()
-        
-        
-        
-        def news = TextBlock.where{
-            category == "news" && dateCreated == max(dateCreated)
-        }.list()
+        def contentHTML = util.selectLatestTextFromCategory(contentCategory)
         def editPage = isEditing?:'false'
-        println isEditing
-        println editPage
         
-        [news: news, isEditing: editPage]
+        [content: contentHTML, isEditing: editPage, category: contentCategory]
     }
 
-    def about() {}
-
-    def classes() {}
-
-    def events() {}
-
-    def studio() {}
-
-    def gallery() {
-        def pics = Images.where{
-            category == "studio"
-        }.list()
-        [pics: pics]
+    def revealGallery(final String category) {
+        def folder = category?:'history'
+        def imageNames = util.gatherImageList(folder)
+        [category: folder, pics: imageNames]
     }
+    
+    
 
 }

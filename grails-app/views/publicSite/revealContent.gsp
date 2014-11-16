@@ -10,40 +10,33 @@
     <g:if test="${isEditing=='true'}"> 
         <script>
             $(document).ready(function(){
-                $("#newsBlock textarea").cleditor();
+                $("#contentBlock textarea").cleditor();
             });
         </script>
     </g:if>
 </head>
 
 <body>
-    <h1>
-        Welcome to <strong>DTDanceArts.com</strong>, 
-        the source for class and school information for Dorothy Thomas School of Dance and Theatre Arts.
-    </h1>
-
-    <main id="newsBlock" name="newsBlock">
-        <g:form name="newsForm" url="[action:'news', controller:'PublicSite']">
+    <main id="contentBlock" name="newsBlock">
+        <g:form name="contentForm" url="[action:'revealContent', controller:'PublicSite']">
             <g:if test="${isEditing=='true'}"> 
                 <textarea id="bodyText" name="bodyText">
             </g:if>
-                <g:each status="i" in="${news}" var="it">
+                <g:each status="i" in="${content}" var="it">
                     ${raw(it.textBlock)}
                 </g:each>
             <g:if test="${isEditing=='true'}"> 
                 </textarea>
-                
             </g:if>
             <g:hiddenField name="isEditing" value="true"/>
+            <g:hiddenField name="category" value ="${category}"/>
             <g:submitButton name="completeEdit" value="Update"/>
         </g:form> 
     </main>
     
     <p>
         Check out our
-        <strong><a href="dtsodbrochure.pdf" target="_blank">
-            Brochure
-        </a></strong>
+        <strong><a href="dtsodbrochure.pdf" target="_blank">Brochure</a></strong>
         for more information. Summer camps and classes are enrolling now!
     </p>
 
